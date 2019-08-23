@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".Login.LoginActivity" android:background="@color/colorPrimary">
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" android:layout_marginBottom="16dp"
+            android:layout_marginStart="16dp" android:layout_marginEnd="16dp" android:layout_marginTop="16dp"
+            android:background="#FFFFFF" app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintVertical_bias="0.0" android:id="@+id/constraintLayout">
+
+        <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/emailTextInput" android:layout_marginTop="21dp"
+                app:layout_constraintTop_toBottomOf="@+id/passwordTextInput" app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="8dp" android:layout_marginEnd="8dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Senha" android:inputType="textPassword"/>
+        </com.google.android.material.textfield.TextInputLayout>
+        <ImageView
+                android:layout_width="165dp"
+                android:layout_height="149dp" app:srcCompat="@drawable/logo"
+                android:id="@+id/imageView" app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
+                app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="8dp"
+                app:layout_constraintTop_toTopOf="parent" android:layout_marginTop="16dp"/>
+        <TextView
+                android:text="Nome Teste"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:id="@+id/textView2"
+                android:layout_marginTop="14dp"
+                app:layout_constraintTop_toBottomOf="@+id/imageView"
+                app:layout_constraintStart_toStartOf="@+id/imageView"
+                app:layout_constraintEnd_toEndOf="@+id/imageView"/>
+        <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/passwordTextInput" android:layout_marginTop="46dp"
+                app:layout_constraintTop_toBottomOf="@+id/textView2" app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="8dp" android:layout_marginEnd="8dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Email"/>
+        </com.google.android.material.textfield.TextInputLayout>
+        <Button
+                android:text="Entrar "
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/SignButton"
+                app:layout_constraintEnd_toStartOf="@+id/ForgotTextView" android:layout_marginBottom="8dp"
+                app:layout_constraintBottom_toBottomOf="parent" android:layout_marginTop="32dp"
+                app:layout_constraintTop_toBottomOf="@+id/ForgotTextView"/>
+        <TextView
+                android:text="Registrar-se"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/RegisterTextView"
+                app:layout_constraintStart_toStartOf="parent" android:layout_marginTop="67dp"
+                android:layout_marginStart="86dp"
+                app:layout_constraintTop_toBottomOf="@+id/emailTextInput"/>
+        <TextView
+                android:text="Esqueci a senha"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/ForgotTextView"
+                app:layout_constraintBaseline_toBaselineOf="@+id/RegisterTextView" android:layout_marginEnd="44dp"
+                app:layout_constraintEnd_toEndOf="parent"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
