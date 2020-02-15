@@ -1,4 +1,4 @@
-package com.example.inspector.Home
+package com.example.inspector.View
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
