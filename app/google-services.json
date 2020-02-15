@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "548036226748",
+    "firebase_url": "https://inspector-9aa4c.firebaseio.com",
+    "project_id": "inspector-9aa4c",
+    "storage_bucket": "inspector-9aa4c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:548036226748:android:5679977e5d2fc2edcfeab9",
+        "android_client_info": {
+          "package_name": "com.example.inspector"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "548036226748-79n7inutu2gd6ti61d3e3q2drrbskrd3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC1JAVj3H095dOozBPQetaLCo1FlCGcVkM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "548036226748-79n7inutu2gd6ti61d3e3q2drrbskrd3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
