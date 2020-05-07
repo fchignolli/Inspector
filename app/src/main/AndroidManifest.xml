@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-          package="com.example.inspector">
+        package="com.example.inspector">
 
     <application
             android:allowBackup="true"
@@ -9,23 +9,29 @@
             android:roundIcon="@mipmap/ic_launcher_round"
             android:supportsRtl="true"
             android:theme="@style/AppTheme">
+        <activity android:name=".View.ForgotPassowordActivity"></activity>
+        <activity android:name=".View.RegisterActivity" />
         <activity android:name=".View.HomeActivity">
             <intent-filter>
-                <action android:name="android.intent.action.VIEW"/>
-                <category android:name="android.intent.category.DEFAULT"/>
-                <category android:name="android.intent.category.BROWSABLE"/>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
                 <data
-                        android:scheme="http"
                         android:host="dssad.cin"
-                        android:pathPattern="/saas"/>
+                        android:pathPattern="/saas"
+                        android:scheme="http" />
             </intent-filter>
         </activity>
-        <activity android:name=".View.MainActivity">
-        </activity>
-        <activity android:name=".View.LoginActivity" android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+        <activity android:name=".View.MainActivity" />
+        <activity
+                android:name=".View.LoginActivity"
+                android:theme="@style/Theme.AppCompat.Light.NoActionBar">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
-                <category android:name="android.intent.category.LAUNCHER"/>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
     </application>
