@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">Inspector</string>
+    <string name="name">Name</string>
+    <string name="password">Senha</string>
+    <string name="email">E-mail</string>
+    <string name="confirm_password">Confirmar Senha</string>
+    <string name="confirm_email">Confirmar Email</string>
+    <string name="register">Registrar</string>
+    <string name="send">Enviar</string>
 </resources>
