@@ -18,16 +18,17 @@
         <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:id="@+id/emailTextInput" android:layout_marginTop="21dp"
-                app:layout_constraintTop_toBottomOf="@+id/passwordTextInput" app:layout_constraintEnd_toEndOf="parent"
+                android:id="@+id/passwordTextInput" android:layout_marginTop="21dp"
+                app:layout_constraintTop_toBottomOf="@+id/emailTextInput" app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 android:layout_marginStart="8dp" android:layout_marginEnd="8dp"
-                app:layout_constraintHorizontal_bias="0.5" app:layout_constraintBottom_toTopOf="@+id/RegisterTextView">
+                app:layout_constraintHorizontal_bias="0.5" app:layout_constraintBottom_toTopOf="@+id/registerTextView">
 
             <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Senha" android:inputType="textPassword"/>
+                    android:hint="@string/password"
+                    android:inputType="textPassword" />
         </com.google.android.material.textfield.TextInputLayout>
         <ImageView
                 android:layout_width="165dp"
@@ -46,44 +47,52 @@
         <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="0dp"
                 android:layout_height="56dp"
-                android:id="@+id/passwordTextInput" android:layout_marginTop="32dp"
+                android:id="@+id/emailTextInput" android:layout_marginTop="32dp"
                 app:layout_constraintTop_toBottomOf="@+id/textView2" app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 android:layout_marginStart="8dp" android:layout_marginEnd="8dp"
-                app:layout_constraintHorizontal_bias="0.5" app:layout_constraintBottom_toTopOf="@+id/emailTextInput">
+                app:layout_constraintHorizontal_bias="0.5" app:layout_constraintBottom_toTopOf="@+id/passwordTextInput">
 
             <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Email"/>
+                    android:hint="@string/email" />
         </com.google.android.material.textfield.TextInputLayout>
         <Button
                 android:text="Entrar "
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:id="@+id/SignButton"
+                android:id="@+id/signButton"
                 android:layout_marginBottom="24dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="32dp"
                 app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="32dp"
-                app:layout_constraintTop_toBottomOf="@+id/RegisterTextView" android:layout_marginTop="8dp"
+                app:layout_constraintTop_toBottomOf="@+id/registerTextView" android:layout_marginTop="8dp"
                 android:backgroundTint="#008477" android:textColor="#FDFDFE"/>
+
         <TextView
-                android:text="Registrar-se"
+                android:id="@+id/registerTextView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/RegisterTextView"
-                app:layout_constraintStart_toStartOf="parent" android:layout_marginTop="16dp"
                 android:layout_marginStart="8dp"
-                app:layout_constraintTop_toBottomOf="@+id/emailTextInput" app:layout_constraintHorizontal_bias="0.5"
-                app:layout_constraintEnd_toStartOf="@+id/ForgotTextView"/>
+                android:layout_marginTop="16dp"
+                android:onClick="openRegister"
+                android:text="Registrar-se"
+                app:layout_constraintEnd_toStartOf="@+id/forgotTextView"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/passwordTextInput" />
+
         <TextView
-                android:text="Esqueci a senha"
+                android:id="@+id/forgotTextView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/ForgotTextView"
-                app:layout_constraintBaseline_toBaselineOf="@+id/RegisterTextView" android:layout_marginEnd="8dp"
-                app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toEndOf="@+id/RegisterTextView"
-                app:layout_constraintHorizontal_bias="0.5"/>
+                android:layout_marginEnd="8dp"
+                android:onClick="openForgotPassword"
+                android:text="Esqueci a senha"
+                app:layout_constraintBaseline_toBaselineOf="@+id/registerTextView"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/registerTextView" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
