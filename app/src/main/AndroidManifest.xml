@@ -10,12 +10,12 @@
             android:supportsRtl="true"
             android:theme="@style/AppTheme">
         <activity
-                android:name=".View.ForgotPassowordActivity"
-                android:parentActivityName=".View.LoginActivity"/>
+                android:name=".Controller.ForgotPassowordActivity"
+                android:parentActivityName=".Controller.LoginActivity"/>
         <activity
-                android:name=".View.RegisterActivity"
-                android:parentActivityName=".View.LoginActivity" />
-        <activity android:name=".View.HomeActivity">
+                android:name=".Controller.RegisterActivity"
+                android:parentActivityName=".Controller.LoginActivity" />
+        <activity android:name=".Controller.HomeActivity">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
 
@@ -29,7 +29,7 @@
             </intent-filter>
         </activity>
         <activity
-                android:name=".View.LoginActivity"
+                android:name=".Controller.LoginActivity"
                 android:theme="@style/Theme.AppCompat.Light.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

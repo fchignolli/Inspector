@@ -1,13 +1,13 @@
-package com.example.inspector.View
+package com.example.inspector.Controller
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.inspector.R
 
-class RegisterActivity : AppCompatActivity() {
+class ForgotPassowordActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_register)
+        setContentView(R.layout.activity_forgot_passoword)
     }
 }

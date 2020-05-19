@@ -1,4 +1,4 @@
-package com.example.inspector.View
+package com.example.inspector.Controller
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
