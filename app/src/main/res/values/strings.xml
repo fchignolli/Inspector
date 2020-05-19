@@ -7,4 +7,7 @@
     <string name="confirm_email">Confirmar Email</string>
     <string name="register">Registrar</string>
     <string name="send">Enviar</string>
+    <string name="mandatory_default_field">Este campo é obrigatório deve ser preenchido</string>
+    <string name="mantaory_email">Por favor insira um email válido</string>
+    <string name="mandatory_password">Sua senha deve ter no minimo 6 characterer</string>
 </resources>
