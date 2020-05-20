@@ -10,8 +10,8 @@ import android.widget.Toast
  */
 class Utils {
     companion object {
-        fun alert(context: Context, text: String) {
-            Toast.makeText(context, text, Toast.LENGTH_SHORT).show()
+        fun alert( text: String) {
+            Toast.makeText(App.instance, text, Toast.LENGTH_SHORT).show()
         }
     }
 }
