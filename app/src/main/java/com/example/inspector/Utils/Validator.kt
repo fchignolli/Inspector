@@ -40,5 +40,9 @@ class Validator {
             }
             return false
         }
+
+        fun isEqual(textInputLayout1: TextInputLayout, textInputLayout2: TextInputLayout): Boolean {
+            return textInputLayout1.editText?.text.toString() == textInputLayout2.editText?.text.toString()
+        }
     }
 }
