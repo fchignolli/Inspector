@@ -27,6 +27,10 @@
             android:title="Outros">
         <menu>
             <item
+                    android:id="@+id/nav_rule"
+                    android:icon="@drawable/ic_menu_book"
+                    android:title="@string/menu_rule" />
+            <item
                     android:id="@+id/nav_logout"
                     android:icon="@drawable/ic_menu_exit"
                     android:title="@string/menu_logout" />

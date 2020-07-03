@@ -33,7 +33,7 @@ class LoginActivity : AppCompatActivity() {
     }
 
     fun onClickForgotPassword(view: View) {
-        startActivity(Intent(this, ForgotPassowordActivity::class.java))
+//        startActivity(Intent(this, ForgotPassowordActivity::class.java))
     }
 
     fun onClickLogin(view: View) {

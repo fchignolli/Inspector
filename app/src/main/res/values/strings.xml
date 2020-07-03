@@ -17,11 +17,17 @@
     <string name="nav_header_subtitle">android.studio@android.com</string>
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
-
+    <!--  MENU STINGS-->
     <string name="menu_home">Home</string>
     <string name="menu_my_reports">Meus Relatórios</string>
     <string name="menu_profile">Perfil</string>
     <string name="menu_change_password">Trocar Senha</string>
     <string name="menu_logout">Sair</string>
-    <string name="home_second">Home Second</string>
+    <string name="menu_rule">Norma CNEN NN 6.10</string>
+    <!--  HOME STRING  -->
+    <string name="home_welcomeUser">Bem vindo ao Inspector, %1$s!</string>
+    <string name="home_pleaseChoose">Por favor escolha um dos formulários de inspeção abaixo</string>
+    <string name="home_control_form">Controle e Monitoração</string>
+    <string name="home_room_form">Salas com Fonte de Radiação</string>
+    <string name="home_tool_form">Instrumentos de Medição</string>
 </resources>

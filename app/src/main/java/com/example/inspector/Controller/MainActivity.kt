@@ -19,6 +19,7 @@ import com.bumptech.glide.Glide
 import com.bumptech.glide.load.engine.DiskCacheStrategy
 import com.bumptech.glide.load.resource.bitmap.CircleCrop
 import com.example.inspector.R
+import com.example.inspector.Utils.Utils
 import com.google.android.material.navigation.NavigationView.*
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
@@ -77,6 +78,9 @@ class MainActivity : AppCompatActivity(), OnNavigationItemSelectedListener {
             }
             R.id.nav_logout -> {
                logout()
+            }
+            R.id.nav_rule -> {
+                Utils.alert("abrir pdf Norma CNEN NN 6.10")
             }
         }
         return true
