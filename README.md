@@ -9,15 +9,17 @@
 
 ## Layout de tela
 - [x] Login
-- [ ] Home
+- [x] Menu
+- [x] Home
 - [ ] Formulário de inspeção
 
 ## Ingração da View com o View Controller
 - [x] Login
-- [ ] Home
+- [x] Home
+- [x] Menu
 - [ ] Formulário de inspeção
 
 ## Camada de Rede 
 - [x] Login
-- [ ] Home
+- [ ] Menu 
 - [ ] Formulário de inspeção
