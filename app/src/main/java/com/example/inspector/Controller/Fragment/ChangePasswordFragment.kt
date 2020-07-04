@@ -20,8 +20,6 @@ class ChangePasswordFragment: Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         val root = inflater.inflate(R.layout.fragment_change_password, container, false)
-        val textView: TextView = root.findViewById(R.id.text_change_password)
-        textView.text = "Change Password"
         return root
     }
 }
