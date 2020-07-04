@@ -16,8 +16,6 @@ class ReportsFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         val root = inflater.inflate(R.layout.fragment_my_reports, container, false)
-        val textView: TextView = root.findViewById(R.id.text_my_reports)
-        textView.text = "Meus Relatórios"
         return root
     }
 }

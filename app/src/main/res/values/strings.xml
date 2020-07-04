@@ -30,7 +30,14 @@
     <string name="home_control_form">Controle e Monitoração</string>
     <string name="home_room_form">Salas com Fonte de Radiação</string>
     <string name="home_tool_form">Instrumentos de Medição</string>
+    <!-- MY REPORTS STRINGS -->
+    <string name="tab_control">Controle</string>
+    <string name="tab_room">Salas</string>
+    <string name="tab_tool">Instrumentos</string>
+    <string name="empty_list">Não possui nenhum formulário</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
+
 </resources>
