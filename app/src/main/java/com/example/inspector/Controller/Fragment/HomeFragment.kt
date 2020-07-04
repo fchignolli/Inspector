@@ -8,6 +8,7 @@ import android.widget.Button
 import android.widget.TextView
 import androidx.cardview.widget.CardView
 import androidx.fragment.app.Fragment
+import androidx.navigation.findNavController
 import com.example.inspector.R
 import com.example.inspector.Utils.Utils
 import com.google.firebase.auth.FirebaseAuth
@@ -46,18 +47,15 @@ class HomeFragment : Fragment() {
 
     fun configureClicks() {
         controlCarView.setOnClickListener {
-            val controlTitle = getString(R.string.home_control_form)
-            Utils.alert("$controlTitle não foi implementado ainda!")
+            it.findNavController().navigate(R.id.action_nav_home_to_controlFormFragment)
         }
 
         roomCarView.setOnClickListener {
-            val roomTitle = getString(R.string.home_room_form)
-            Utils.alert("$roomTitle não foi implementado ainda!")
+            it.findNavController().navigate(R.id.action_nav_home_to_roomFromFragment)
         }
 
         toolCarView.setOnClickListener {
-            val toolTitle = getString(R.string.home_tool_form)
-            Utils.alert("$toolTitle não foi implementado ainda!")
+            it.findNavController().navigate(R.id.action_nav_home_to_toolFormFragment)
         }
 
     }

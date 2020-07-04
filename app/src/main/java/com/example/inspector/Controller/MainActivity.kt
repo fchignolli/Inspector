@@ -79,8 +79,8 @@ class MainActivity : AppCompatActivity(), OnNavigationItemSelectedListener {
             R.id.nav_logout -> {
                logout()
             }
-            R.id.nav_rule -> {
-                Utils.alert("abrir pdf Norma CNEN NN 6.10")
+            R.id.nav_rules -> {
+                navController.navigate(R.id.nav_rules)
             }
         }
         return true

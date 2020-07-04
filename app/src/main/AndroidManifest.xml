@@ -17,26 +17,8 @@
                 android:label="@string/title_activity_main"
                 android:theme="@style/AppTheme.NoActionBar"></activity>
         <activity
-                android:name=".Controller.ForgotPassowordActivity"
-                android:parentActivityName=".Controller.LoginActivity" />
-        <activity
                 android:name=".Controller.RegisterActivity"
                 android:parentActivityName=".Controller.LoginActivity" />
-        <activity
-                android:name=".Controller.HomeActivity"
-                android:theme="@style/Theme.AppCompat.Light.NoActionBar">
-            <intent-filter>
-                <action android:name="android.intent.action.VIEW" />
-
-                <category android:name="android.intent.category.DEFAULT" />
-                <category android:name="android.intent.category.BROWSABLE" />
-
-                <data
-                        android:host="dssad.cin"
-                        android:pathPattern="/saas"
-                        android:scheme="http" />
-            </intent-filter>
-        </activity>
         <activity
                 android:name=".Controller.LoginActivity"
                 android:theme="@style/Theme.AppCompat.Light.NoActionBar">
