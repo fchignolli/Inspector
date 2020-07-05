@@ -35,7 +35,21 @@
     <string name="tab_room">Salas</string>
     <string name="tab_tool">Instrumentos</string>
     <string name="empty_list">Não possui nenhum formulário</string>
-
+    <!--CONTROL FORM STRINGS -->
+    <string name="title_real_condition">Condições reais de operação das instalações</string>
+    <string name="work_load">Carga de Trablho</string>
+    <string name="usage_factors">Fatores de Uso</string>
+    <string name="occupation_factors">Fatores de Ocupação</string>
+    <string name="primary_beam_attenuation">Atenuação do feixe primário</string>
+    <string name="existing_shields_integrity">Exite integridade das blindagens?</string>
+    <string name="application_of_restrictions_regarding_the_use_factor_of_any_primary_barrier">Quais são as aplicação de restrições com relação ao fator de uso de qualquer barreira primária</string>
+    <string name="title_measurements_of_radiation_levels">Medições dos níveis de radiação</string>
+    <string name="assessment_of_the_adequacy_of_primary_barriers">Avaliação da adequação de barreiras primárias:</string>
+    <string name="assessment_of_the_adequacy_of_secondary_barriers">Avaliação da adequação de barreiras secundárias:</string>
+    <string name="irradiator_gantry_angulations_most_often_used_in_treatments">Angulações do gantry do irradiador mais frequentemente utilizadas nos tratamentos</string>
+    <string name="observations">Observações</string>
+    <string name="recommendations_necessary_for_taking_corrective_actions">Recomendações necessárias para a tomada de ações corretivas</string>
+    <string name="write_if_you_want">Escreva caso necessário</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 

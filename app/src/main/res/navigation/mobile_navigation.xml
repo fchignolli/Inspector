@@ -55,17 +55,17 @@
     <fragment
             android:id="@+id/controlFormFragment"
             android:name="com.example.inspector.Controller.Fragment.ControlFormFragment"
-            android:label="fragment_control_form"
+            android:label="@string/home_control_form"
             tools:layout="@layout/fragment_control_form" />
     <fragment
             android:id="@+id/roomFromFragment"
             android:name="com.example.inspector.Controller.Fragment.RoomFromFragment"
-            android:label="fragment_room_from"
+            android:label="@string/home_room_form"
             tools:layout="@layout/fragment_room_from" />
     <fragment
             android:id="@+id/toolFormFragment"
             android:name="com.example.inspector.Controller.Fragment.ToolFormFragment"
-            android:label="fragment_tool_form"
+            android:label="@string/home_tool_form"
             tools:layout="@layout/fragment_tool_form" />
     <fragment
             android:id="@+id/nav_rules"
