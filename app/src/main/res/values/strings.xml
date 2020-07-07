@@ -35,6 +35,12 @@
     <string name="tab_room">Salas</string>
     <string name="tab_tool">Instrumentos</string>
     <string name="empty_list">Não possui nenhum formulário</string>
+    <!-- FOR THE ALL FORMS-->
+    <string name="place_name">Local</string>
+    <string name="inspected_name">Nome do responsável pelo local</string>
+    <string name="date">Data</string>
+    <string name="address">Endereço</string>
+    <string name="loading">Carregando...</string>
     <!--CONTROL FORM STRINGS -->
     <string name="title_real_condition">Condições reais de operação das instalações</string>
     <string name="work_load">Carga de Trablho</string>
@@ -52,6 +58,16 @@
     <string name="write_if_you_want">Escreva caso necessário</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="address_found">Endereço encontrado</string>
+    <string name="no_address_found">Endereço não encontrado</string>
+    <string name="invalid_lat_long_used">Uso invalido de um lateinit long</string>
+    <string name="service_not_available">Serviço não disponivel</string>
+    <string name="no_location_data_provided">Local não fornecido</string>
+
+    <string-array name="yes_no_array">
+        <item>Sim</item>
+        <item>Não</item>
+    </string-array>
 
 
 </resources>

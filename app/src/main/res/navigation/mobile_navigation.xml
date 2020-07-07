@@ -72,4 +72,19 @@
             android:name="com.example.inspector.Controller.Fragment.RulesFragment"
             android:label="@string/menu_rules"
             tools:layout="@layout/fragment_rules" />
+    <fragment
+            android:id="@+id/controlListFragment"
+            android:name="com.example.inspector.Controller.Fragment.ControlListFragment"
+            android:label="fragment_control_list"
+            tools:layout="@layout/fragment_control_list" />
+    <fragment
+            android:id="@+id/roomListFragment"
+            android:name="com.example.inspector.Controller.Fragment.RoomListFragment"
+            android:label="fragment_room_list"
+            tools:layout="@layout/fragment_room_list" />
+    <fragment
+            android:id="@+id/toolListFragment"
+            android:name="com.example.inspector.Controller.Fragment.ToolListFragment"
+            android:label="fragment_tool_list"
+            tools:layout="@layout/fragment_tool_list" />
 </navigation>
