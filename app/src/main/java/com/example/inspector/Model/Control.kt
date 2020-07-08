@@ -1,5 +1,8 @@
 package com.example.inspector.Model
 
+import android.os.Parcel
+import android.os.Parcelable
+import java.io.Serializable
 import java.text.DateFormat
 import java.text.SimpleDateFormat
 import java.util.*
@@ -24,7 +27,7 @@ data class Control(
     var angulationData: String = "",
     var recommendedAction: String = "",
     var observation: String = ""
-) {
+): Serializable {
     fun getUserDate(): String {
         val simpleDateFormat: DateFormat = SimpleDateFormat.getDateInstance()
         return simpleDateFormat.format(date)

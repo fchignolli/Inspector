@@ -1,9 +1,12 @@
 package com.example.inspector.Controller.Adapter
 
 import android.content.Context
+import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.os.bundleOf
+import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.RecyclerView.Adapter
 import com.example.inspector.Model.Control
@@ -11,6 +14,9 @@ import com.example.inspector.R
 import com.example.inspector.Utils.Utils
 import com.firebase.ui.firestore.FirestoreRecyclerAdapter
 import com.firebase.ui.firestore.FirestoreRecyclerOptions
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.firestore.CollectionReference
+import com.google.firebase.firestore.FirebaseFirestore
 import kotlinx.android.synthetic.main.item_default_form.view.*
 import java.text.SimpleDateFormat
 import java.util.*
@@ -27,11 +33,14 @@ class ControlListAdapter(options: FirestoreRecyclerOptions<Control>, private val
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int, model: Control) {
-        holder.let {
-            it.bindView(model)
-            it.itemView.setOnClickListener {
-                Utils.alert("abrir details")
+        holder.let { item ->
+            item.bindView(model)
+            item.itemView.setOnClickListener {
+                val bundle = Bundle()
+                bundle.putSerializable("control", model)
+                it.findNavController().navigate(R.id.action_nav_my_reports_to_controlDetailsFragment, bundle)
             }
+
         }
     }
 

@@ -25,30 +25,12 @@ import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.Query
 
 class ReportsFragment : Fragment() {
-    val TAG = "ReportsFragment"
-    // Firebase pre sets
-    private lateinit var mDatabase: FirebaseFirestore
-    private lateinit var auth: FirebaseAuth
-    private lateinit var collectionControl: CollectionReference
-    private lateinit var collectionRoom: CollectionReference
-    private lateinit var collectionTool: CollectionReference
-    //Layout
-    private lateinit var tabLayout: TabLayout
-
-    // Listas de modelo para preencher a recyclerView
-    private val controlList: ArrayList<Control> = ArrayList()
-
-    private var controlAdapter: ControlListAdapter? = null
-
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         val root = inflater.inflate(R.layout.fragment_my_reports, container, false)
-        mDatabase = FirebaseFirestore.getInstance()
-        auth = FirebaseAuth.getInstance()
-
         val viewPager: ViewPager = root.findViewById(R.id.viewPager)
         val tabLayout: TabLayout = root.findViewById(R.id.tabLayout)
 
@@ -62,51 +44,4 @@ class ReportsFragment : Fragment() {
         activity?.window?.setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN)
         return root
     }
-
-    override fun onStart() {
-        super.onStart()
-        //getAllControlForm()
-        //loadControlList()
-        //setControlAdapter()
-        //controlAdapter!!.startListening()
-    }
-
-    override fun onStop() {
-        super.onStop()
-//        if (controlAdapter != null) {
-//            controlAdapter!!.stopListening()
-//        }
-    }
-
-//    private fun setupRecyclerView() {
-//        recyclerView.layoutManager = LinearLayoutManager(context, RecyclerView.VERTICAL, false)
-//        recyclerView.addItemDecoration(DividerItemDecoration(context, DividerItemDecoration.VERTICAL))
-//        recyclerView.setHasFixedSize(true)
-//    }
-//
-//    private fun setControlAdapter() {
-//        recyclerView.adapter = controlAdapter
-//    }
-//
-//    private fun loadControlList() {
-//        val query = collectionControl.orderBy("date", Query.Direction.ASCENDING)
-//        val options = FirestoreRecyclerOptions.Builder<Control>().setQuery(query, Control::class.java).build()
-//        controlAdapter = ControlListAdapter(options, context!!)
-//    }
-
-//    fun setupActsList(acts: List<ActEntity>) {
-//        reportRecyclerView.adapter = ActListAdapter(acts, this)
-//
-//    }
-//
-//    fun setupPositivesList(positives: List<PositiveEntity>) {
-//        reportRecyclerView.adapter = PositiveListAdapter(positives, this)
-//    }
-
-    private fun setupCollections() {
-        collectionControl = mDatabase.collection("users").document(auth.currentUser?.uid.toString()).collection("controlForm")
-        collectionRoom = mDatabase.collection("users").document(auth.currentUser?.uid.toString()).collection("roomForm")
-        collectionTool = mDatabase.collection("users").document(auth.currentUser?.uid.toString()).collection("toolForm")
-    }
-
 }

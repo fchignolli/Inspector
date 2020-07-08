@@ -56,6 +56,7 @@
     <string name="observations">Observações</string>
     <string name="recommendations_necessary_for_taking_corrective_actions">Recomendações necessárias para a tomada de ações corretivas</string>
     <string name="write_if_you_want">Escreva caso necessário</string>
+
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="address_found">Endereço encontrado</string>
@@ -68,6 +69,8 @@
         <item>Sim</item>
         <item>Não</item>
     </string-array>
+
+    <string name="detail">Detalhes</string>
 
 
 </resources>

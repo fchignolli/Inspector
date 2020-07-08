@@ -40,7 +40,12 @@
             android:id="@+id/nav_my_reports"
             android:name="com.example.inspector.Controller.Fragment.ReportsFragment"
             android:label="@string/menu_my_reports"
-            tools:layout="@layout/fragment_my_reports" />
+            tools:layout="@layout/fragment_my_reports" >
+        <action
+                android:id="@+id/action_nav_my_reports_to_controlDetailsFragment"
+                app:destination="@id/controlDetailsFragment"
+                app:popUpTo="@id/nav_my_reports" />
+    </fragment>
 
     <fragment
             android:id="@+id/nav_change_password"
@@ -87,4 +92,9 @@
             android:name="com.example.inspector.Controller.Fragment.ToolListFragment"
             android:label="fragment_tool_list"
             tools:layout="@layout/fragment_tool_list" />
+    <fragment
+            android:id="@+id/controlDetailsFragment"
+            android:name="com.example.inspector.Controller.Fragment.ControlDetailsFragment"
+            android:label="@string/detail"
+            tools:layout="@layout/fragment_control_details" />
 </navigation>

@@ -133,7 +133,7 @@ class ControlFormFragment : Fragment() {
     }
 
     fun configureDate() {
-        val sdf: DateFormat = SimpleDateFormat.getDateInstance()
+        val sdf: DateFormat = SimpleDateFormat.getDateTimeInstance()
         dateTextLayout.editText?.setText(sdf.format(currentDate))
         dateTextLayout.isEnabled = false
     }
