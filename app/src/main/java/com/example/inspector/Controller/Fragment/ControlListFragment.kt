@@ -59,11 +59,7 @@ class ControlListFragment : Fragment() {
 
                 override fun onSwiped(viewHolder: RecyclerView.ViewHolder, direction: Int) {
                     if(direction == ItemTouchHelper.LEFT) {
-                        Utils.alert("Deletar..")
                         deleteDocument(viewHolder.adapterPosition)
-                    }
-                    if(direction == ItemTouchHelper.RIGHT) {
-                        Utils.alert("Editar..")
                     }
                 }
 
@@ -116,7 +112,7 @@ class ControlListFragment : Fragment() {
             }
 
         Snackbar.make(recyclerView, "Item deletado", Snackbar.LENGTH_LONG)
-            .setAction("Undo", View.OnClickListener {
+            .setAction("Defazer", View.OnClickListener {
                 documentReference.set(control)
             })
             .show()
