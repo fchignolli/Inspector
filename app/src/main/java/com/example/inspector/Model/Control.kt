@@ -2,10 +2,12 @@ package com.example.inspector.Model
 
 import android.os.Parcel
 import android.os.Parcelable
+import com.google.firebase.storage.StorageReference
 import java.io.Serializable
 import java.text.DateFormat
 import java.text.SimpleDateFormat
 import java.util.*
+import kotlin.collections.ArrayList
 
 /**
  * Created by Lucas Alves dos Santos on 07/07/2020.
@@ -26,7 +28,8 @@ data class Control(
     var assessmentSecond: String = "",
     var angulationData: String = "",
     var recommendedAction: String = "",
-    var observation: String = ""
+    var observation: String = "",
+    var images: ArrayList<Image> = ArrayList()
 ): Serializable {
     fun getUserDate(): String {
         val simpleDateFormat: DateFormat = SimpleDateFormat.getDateInstance()

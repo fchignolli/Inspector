@@ -39,7 +39,7 @@ class ControlListFragment : Fragment() {
         super.onCreate(savedInstanceState)
         mDatabase = FirebaseFirestore.getInstance()
         auth = FirebaseAuth.getInstance()
-        collectionControl = mDatabase.collection("users").document(auth.currentUser?.uid.toString()).collection("controlForm")
+        collectionControl = mDatabase.collection("users").document(auth.currentUser?.uid.toString()).collection("control_form")
     }
 
     override fun onCreateView(

@@ -40,7 +40,6 @@ class ControlListAdapter(options: FirestoreRecyclerOptions<Control>, private val
                 bundle.putSerializable("control", model)
                 it.findNavController().navigate(R.id.action_nav_my_reports_to_controlDetailsFragment, bundle)
             }
-
         }
     }
 

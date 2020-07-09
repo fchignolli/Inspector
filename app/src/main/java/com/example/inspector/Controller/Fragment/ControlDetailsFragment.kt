@@ -6,6 +6,9 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.EditText
+import androidx.recyclerview.widget.GridLayoutManager
+import androidx.recyclerview.widget.RecyclerView
+import com.example.inspector.Controller.Adapter.FormImageAdapter
 import com.example.inspector.Model.Control
 import com.example.inspector.R
 
@@ -24,6 +27,7 @@ class ControlDetailsFragment : Fragment() {
     private lateinit var angulationEditText: EditText
     private lateinit var observationEditText: EditText
     private lateinit var recommendedActionEditText: EditText
+    private lateinit var imageRecyclerView: RecyclerView
 
     private lateinit var control: Control
 
@@ -50,6 +54,7 @@ class ControlDetailsFragment : Fragment() {
         angulationEditText = root.findViewById(R.id.angulationEditText)
         observationEditText = root.findViewById(R.id.observationEditText)
         recommendedActionEditText = root.findViewById(R.id.recommendationEditText)
+        imageRecyclerView = root.findViewById(R.id.imageRecyclerViewControlDetails)
         return root
     }
 
@@ -62,12 +67,19 @@ class ControlDetailsFragment : Fragment() {
         val editTexts = getArrayOfEditTexts()
         configureEditTexts(editTexts, false)
         setTextOnEditTexts()
+        setupImageRecyclerView()
     }
 
     private fun configureEditTexts(editTexts: ArrayList<EditText>, isEnabled: Boolean) {
         for(editText in editTexts) {
             editText.isEnabled = isEnabled
         }
+    }
+
+    private fun setupImageRecyclerView() {
+        imageRecyclerView.layoutManager = GridLayoutManager(context, 2)
+        imageRecyclerView.adapter = FormImageAdapter(control.images, ArrayList(), context, canRemove = false)
+        imageRecyclerView.setHasFixedSize(true)
     }
 
     private fun setTextOnEditTexts() {
