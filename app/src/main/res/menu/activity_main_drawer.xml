@@ -17,9 +17,9 @@
                 android:icon="@drawable/ic_menu_profile"
                 android:title="@string/menu_profile" />
         <item
-                android:id="@+id/nav_change_password"
-                android:icon="@drawable/ic_menu_change_password"
-                android:title="@string/menu_change_password" />
+                android:id="@+id/nav_change_email"
+                android:icon="@drawable/ic_email_black_24dp"
+                android:title="@string/menu_change_email" />
 
     </group>
     <item

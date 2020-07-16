@@ -3,11 +3,11 @@
         package="com.example.inspector">
 
     <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
-    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
-    <uses-permission android:name="android.permission.CAMERA"/>
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <uses-feature
             android:name="android.hardware.camera"
@@ -21,18 +21,21 @@
             android:roundIcon="@mipmap/ic_launcher_round"
             android:supportsRtl="true"
             android:theme="@style/AppTheme">
+        <activity android:name=".Controller.Activity.ForgotPasswordActivity"
+                android:parentActivityName=".Controller.Activity.LoginActivity" />
         <service
                 android:name=".Services.FetchAddressIntentService"
-                android:exported="false"/>
+                android:exported="false" />
+
         <activity
-                android:name=".Controller.MainActivity"
+                android:name=".Controller.Activity.MainActivity"
                 android:label="@string/title_activity_main"
-                android:theme="@style/AppTheme.NoActionBar"></activity>
+                android:theme="@style/AppTheme.NoActionBar" />
         <activity
-                android:name=".Controller.RegisterActivity"
-                android:parentActivityName=".Controller.LoginActivity" />
+                android:name=".Controller.Activity.RegisterActivity"
+                android:parentActivityName=".Controller.Activity.LoginActivity" />
         <activity
-                android:name=".Controller.LoginActivity"
+                android:name=".Controller.Activity.LoginActivity"
                 android:theme="@style/Theme.AppCompat.Light.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -48,9 +51,8 @@
                 android:grantUriPermissions="true">
             <meta-data
                     android:name="android.support.FILE_PROVIDER_PATHS"
-                    android:resource="@xml/file_paths"></meta-data>
+                    android:resource="@xml/file_paths" />
         </provider>
     </application>
-
 
 </manifest>

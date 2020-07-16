@@ -1,5 +1,6 @@
-package com.example.inspector.Controller
+package com.example.inspector.Controller.Activity
 
+import android.app.AlertDialog
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -33,7 +34,7 @@ class LoginActivity : AppCompatActivity() {
     }
 
     fun onClickForgotPassword(view: View) {
-//        startActivity(Intent(this, ForgotPassowordActivity::class.java))
+        startActivity(Intent(this, ForgotPasswordActivity::class.java))
     }
 
     fun onClickLogin(view: View) {
@@ -69,9 +70,22 @@ class LoginActivity : AppCompatActivity() {
 
     private fun updateUI(currentUser: FirebaseUser?) {
         if (currentUser != null) {
-            startActivity(Intent(this, MainActivity::class.java))
-            finish()
+            if(currentUser.isEmailVerified) {
+                startActivity(Intent(this, MainActivity::class.java))
+                finish()
+            } else {
+                auth.signOut()
+                val alertBuilder = AlertDialog.Builder(this)
+                alertBuilder.setMessage(R.string.please_verify)
+                    .setPositiveButton(R.string.resend) {_, _ ->
+                        currentUser.sendEmailVerification()
+                    }
+                    .setNegativeButton("Cancel") {_, _ -> }
+                alertBuilder.show()
+
+            }
         }
+
     }
 
 

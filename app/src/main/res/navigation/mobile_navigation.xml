@@ -48,10 +48,10 @@
     </fragment>
 
     <fragment
-            android:id="@+id/nav_change_password"
-            android:name="com.example.inspector.Controller.Fragment.ChangePasswordFragment"
-            android:label="@string/menu_change_password"
-            tools:layout="@layout/fragment_change_password" />
+            android:id="@+id/nav_change_email"
+            android:name="com.example.inspector.Controller.Fragment.ChangeEmailFragment"
+            android:label="@string/menu_change_email"
+            tools:layout="@layout/fragment_change_email" />
     <fragment
             android:id="@+id/nav_profile"
             android:name="com.example.inspector.Controller.Fragment.ProfileFragment"

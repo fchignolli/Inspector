@@ -1,4 +1,4 @@
-package com.example.inspector.Controller
+package com.example.inspector.Controller.Activity
 
 import android.content.Intent
 import android.os.Bundle
@@ -47,7 +47,7 @@ class MainActivity : AppCompatActivity(), OnNavigationItemSelectedListener {
                 R.id.nav_home,
                 R.id.nav_my_reports,
                 R.id.nav_profile,
-                R.id.nav_change_password,
+                R.id.nav_change_email,
                 R.id.nav_logout
             ), drawerLayout
         )
@@ -72,8 +72,8 @@ class MainActivity : AppCompatActivity(), OnNavigationItemSelectedListener {
             R.id.nav_profile -> {
                 navController.navigate(R.id.nav_profile)
             }
-            R.id.nav_change_password -> {
-                navController.navigate(R.id.nav_change_password)
+            R.id.nav_change_email -> {
+                navController.navigate(R.id.nav_change_email)
             }
             R.id.nav_logout -> {
                logout()

@@ -1,5 +1,6 @@
 package com.example.inspector.Utils
 
+import android.app.AlertDialog
 import android.content.Context
 import android.widget.Toast
 
@@ -13,5 +14,17 @@ class Utils {
         fun alert( text: String) {
             Toast.makeText(App.instance, text, Toast.LENGTH_SHORT).show()
         }
+
+        fun showSimpleAlertDialog(context: Context, message: String) {
+            val alertDialog = AlertDialog.Builder(context)
+            alertDialog.setMessage(message)
+            alertDialog.setPositiveButton("OK") { _, _ ->
+
+            }
+            alertDialog.show()
+        }
+
     }
+
+
 }

@@ -1,10 +1,10 @@
-package com.example.inspector.Controller
+package com.example.inspector.Controller.Activity
 
+import android.app.AlertDialog
 import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
-import android.util.Patterns
 import android.view.View
 import com.example.inspector.R
 import com.example.inspector.Utils.Utils
@@ -65,7 +65,8 @@ class RegisterActivity : AppCompatActivity() {
         currentUser.updateProfile(profileUpdates)
             .addOnCompleteListener { task ->
                 if(task.isSuccessful) {
-                    Log.d(TAG, "Perfil do usuário atualizado com sucesso!")
+                    Utils.alert("Registrado com sucesso.")
+                    sendVerifyEmail(currentUser)
                 }
 
         }
@@ -74,7 +75,22 @@ class RegisterActivity : AppCompatActivity() {
     private fun updateUI(currentUser: FirebaseUser?) {
         if(currentUser != null) {
             updateUser(currentUser)
-            finish()
+
         }
+    }
+
+    private fun sendVerifyEmail(user: FirebaseUser) {
+        user.sendEmailVerification()
+            .addOnCompleteListener {
+                if(it.isSuccessful) {
+                    val alertBuilder = AlertDialog.Builder(this)
+                    alertBuilder.setMessage("E-mail para verificação enviado com Sucesso!")
+                        .setPositiveButton(R.string.ok) {_, _ ->
+                            auth.signOut()
+                            finish()
+                        }
+                    alertBuilder.show()
+                }
+            }
     }
 }
