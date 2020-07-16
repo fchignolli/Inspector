@@ -59,7 +59,6 @@ class RegisterActivity : AppCompatActivity() {
         val name = nameTextInput.editText?.text.toString()
         val profileUpdates = UserProfileChangeRequest.Builder()
             .setDisplayName(name)
-            .setPhotoUri(Uri.parse("https://cdn1.iconfinder.com/data/icons/user-pictures/100/unknown-512.png"))
             .build()
 
         currentUser.updateProfile(profileUpdates)
@@ -68,14 +67,12 @@ class RegisterActivity : AppCompatActivity() {
                     Utils.alert("Registrado com sucesso.")
                     sendVerifyEmail(currentUser)
                 }
-
         }
     }
 
     private fun updateUI(currentUser: FirebaseUser?) {
         if(currentUser != null) {
             updateUser(currentUser)
-
         }
     }
 

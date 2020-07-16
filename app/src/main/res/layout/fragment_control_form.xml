@@ -235,7 +235,7 @@
                         android:drawableStart="@drawable/ic_camera_alt_black_24dp"
                         android:drawablePadding="8dp"
                         android:drawableTint="@color/colorPrimary"
-                        android:text="Camera"
+                        android:text="@string/camera"
                         android:textSize="18sp" />
 
                 <TextView
@@ -248,7 +248,7 @@
                         android:drawableStart="@drawable/ic_attachment_black_24dp"
                         android:drawablePadding="8dp"
                         android:drawableTint="@color/colorPrimary"
-                        android:text="Galeria"
+                        android:text="@string/gallery"
                         android:textSize="18sp" />
 
                 <View style="@style/Divider"/>

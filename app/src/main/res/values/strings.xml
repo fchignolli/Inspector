@@ -22,6 +22,10 @@
     <string name="please_verify">Por favor verifique seu e-mail para continuar utilizando a aplicação</string>
     <string name="ok">OK</string>
     <string name="cancel">Cancel</string>
+    <string name="save">Salvar</string>
+    <string name="edit_profile_picture">Editar Foto</string>
+    <string name="camera">Câmera</string>
+    <string name="gallery">Galeria</string>
     <!--  MENU STINGS-->
     <string name="menu_home">Home</string>
     <string name="menu_my_reports">Meus Relatórios</string>
@@ -69,6 +73,7 @@
     <string name="invalid_lat_long_used">Uso invalido de um lateinit long</string>
     <string name="service_not_available">Serviço não disponivel</string>
     <string name="no_location_data_provided">Local não fornecido</string>
+
 
     <string-array name="yes_no_array">
         <item>Sim</item>

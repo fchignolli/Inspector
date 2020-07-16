@@ -3,6 +3,7 @@ package com.example.inspector.Controller.Activity
 import android.content.Intent
 import android.os.Bundle
 import android.view.MenuItem
+import android.view.View
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
@@ -58,7 +59,17 @@ class MainActivity : AppCompatActivity(), OnNavigationItemSelectedListener {
         setupUI(auth.currentUser)
         setupNavigationHeader(auth.currentUser)
 
+        drawerLayout.addDrawerListener(object: DrawerLayout.DrawerListener {
+            override fun onDrawerStateChanged(newState: Int) {}
+            override fun onDrawerSlide(drawerView: View, slideOffset: Float) {}
+            override fun onDrawerClosed(drawerView: View) {}
+            override fun onDrawerOpened(drawerView: View) {
+                setupNavigationHeader(auth.currentUser)
+            }
+        })
+
     }
+
 
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
         drawerLayout.closeDrawers()
@@ -91,7 +102,7 @@ class MainActivity : AppCompatActivity(), OnNavigationItemSelectedListener {
         return navController.navigateUp(appBarConfiguration) || super.onSupportNavigateUp()
     }
 
-    fun setupNavigationHeader(currentUser: FirebaseUser?) {
+    private fun setupNavigationHeader(currentUser: FirebaseUser?) {
         val headerView = navView.getHeaderView(0)
         val name = headerView.findViewById(R.id.userNameTextView) as TextView
         val email = headerView.findViewById(R.id.userEmailTextView) as TextView
@@ -99,11 +110,12 @@ class MainActivity : AppCompatActivity(), OnNavigationItemSelectedListener {
 
         name.text = currentUser?.displayName
         email.text = currentUser?.email
+        print(currentUser?.photoUrl.toString())
         Glide.with(this)
             .load(currentUser?.photoUrl)
-            .skipMemoryCache(true)
-            .diskCacheStrategy(DiskCacheStrategy.NONE)
-            .transform(CircleCrop())
+            .circleCrop()
+            .diskCacheStrategy(DiskCacheStrategy.AUTOMATIC)
+            .error(R.drawable.ic_account_circle_24dp)
             .into(profileImage)
     }
 
