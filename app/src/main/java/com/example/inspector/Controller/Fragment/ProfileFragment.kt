@@ -71,7 +71,8 @@ class ProfileFragment : Fragment() {
         nameEditText.setText(currentUser?.displayName)
         emailEditText.isEnabled = false
         emailEditText.setText(currentUser?.email)
-        updatePhoto(currentUser?.photoUrl!!)
+        updatePhoto(currentUser?.photoUrl)
+
     }
 
     private fun updatePhoto(uri: Uri?) {
