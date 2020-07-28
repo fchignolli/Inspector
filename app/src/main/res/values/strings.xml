@@ -65,7 +65,19 @@
     <string name="observations">Observações</string>
     <string name="recommendations_necessary_for_taking_corrective_actions">Recomendações necessárias para a tomada de ações corretivas</string>
     <string name="write_if_you_want">Escreva caso necessário</string>
-
+    <!-- SALAS COM FONTE -->
+    <string name="must_owm_fisrt_section">As salas de tratamento devem possuir:</string>
+    <string name="security_light">Sinalização luminosa fora da sala, com luz vermelha indicando que o feixe de radiação está ligado ou que a fonte de radiação está exposta, e luz verde indicando que o feixe encontra-se desligado, ou que a fonte de radiação está recolhida em sua blindagem.</string>
+    <string name="electronic_device">Dispositivos eletrônicos que possibilitem a observação dos pacientes em condições de tratamento a partir da sala de comando.</string>
+    <string name="communicate_device">Dispositivo que possibilite a comunicação oral com o paciente durante o tratamento a partir da sala de comando.</string>
+    <string name="open_device">Dispositivo identificado que possibilite a abertura da porta da sala de tratamento pelo lado interno da sala.</string>
+    <string name="open_external_device">Dispositivos que possibilitem a abertura da porta da sala, pelo lado externo, no caso de suspensão da energia elétrica.</string>
+    <string name="lighting_device">Dispositivos que possibilitem a iluminação interna da sala de tratamento em caso de suspensão da energia elétrica durante o tempo máximo necessário para retirada de pacientes da sala.</string>
+    <string name="buttons_should_have">Botões de emergência localizados no painel de controle e, internamente à sala, em sua entrada e, pelo menos, em uma das paredes próximas à fonte de radiação</string>
+    <string name="must_owm_second_section">Devem ser afixados em local visível na entrada das salas de tratamento, do laboratório de preparação de material radioativo para uso em braquiterapia de baixa taxa de dose e da sala para armazenamento de fontes de radiação e rejeitos radioativos, os seguintes elementos gráficos:</string>
+    <string name="symbol_should_have">Símbolo internacional de presença de radiação ionizante.</string>
+    <string name="information_about_source">Informação sobre a fonte de radiação.</string>
+    <string name="action_plan">Plano de ação para situação de emergência contendo a identificação dos responsáveis a serem acionados em situação de emergência e seus telefones para contato.</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="address_found">Endereço encontrado</string>
