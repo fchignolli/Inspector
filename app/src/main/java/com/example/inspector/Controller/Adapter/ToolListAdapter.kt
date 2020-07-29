@@ -30,7 +30,7 @@ class ToolListAdapter(options: FirestoreRecyclerOptions<Tool>, private val conte
             item.itemView.setOnClickListener {
                 val bundle = Bundle()
                 bundle.putSerializable("tool", model)
-                //it.findNavController().navigate(R.id.action_nav_my_reports_to_controlDetailsFragment, bundle)
+                it.findNavController().navigate(R.id.action_nav_my_reports_to_toolDetailsFragment, bundle)
             }
         }
     }

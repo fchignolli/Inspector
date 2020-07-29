@@ -45,6 +45,14 @@
                 android:id="@+id/action_nav_my_reports_to_controlDetailsFragment"
                 app:destination="@id/controlDetailsFragment"
                 app:popUpTo="@id/nav_my_reports" />
+        <action
+                android:id="@+id/action_nav_my_reports_to_roomDetailsFragment"
+                app:destination="@id/roomDetailsFragment"
+                app:popUpTo="@id/nav_my_reports" />
+        <action
+                android:id="@+id/action_nav_my_reports_to_toolDetailsFragment"
+                app:destination="@id/toolDetailsFragment"
+                app:popUpTo="@id/nav_my_reports" />
     </fragment>
 
     <fragment
@@ -97,4 +105,14 @@
             android:name="com.example.inspector.Controller.Fragment.Control.ControlDetailsFragment"
             android:label="@string/detail"
             tools:layout="@layout/fragment_control_details" />
+    <fragment
+            android:id="@+id/roomDetailsFragment"
+            android:name="com.example.inspector.Controller.Fragment.Room.RoomDetailsFragment"
+            android:label="@string/detail"
+            tools:layout="@layout/fragment_room_details" />
+    <fragment
+            android:id="@+id/toolDetailsFragment"
+            android:name="com.example.inspector.Controller.Fragment.Tool.ToolDetailsFragment"
+            android:label="@string/detail"
+            tools:layout="@layout/fragment_tool_details" />
 </navigation>

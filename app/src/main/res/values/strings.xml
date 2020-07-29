@@ -78,7 +78,7 @@
     <string name="symbol_should_have">Símbolo internacional de presença de radiação ionizante.</string>
     <string name="information_about_source">Informação sobre a fonte de radiação.</string>
     <string name="action_plan">Plano de ação para situação de emergência contendo a identificação dos responsáveis a serem acionados em situação de emergência e seus telefones para contato.</string>
-    <!-- INTRUMENTAÇÃO DE MEDIDA --> 
+    <!-- INTRUMENTAÇÃO DE MEDIDA -->
     <string name="instrusment_form_title">O Serviço de Radioterapia deve dispor dos seguintes instrumentos de medição de grandezas de influência:</string>
     <string name="barometer_resolution">Resolução mínima do barômetro do tipo aneróide</string>
     <string name="thermometer_resolution">Resolução mínima termômetro</string>
@@ -94,6 +94,9 @@
     </string-array>
 
     <string name="detail">Detalhes</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 
 </resources>

@@ -24,7 +24,7 @@ import com.google.firebase.firestore.Query
 import it.xabaras.android.recyclerview.swipedecorator.RecyclerViewSwipeDecorator
 
 class ToolListFragment : Fragment() {
-    private val TAG = "RoomListFragment"
+    private val TAG = "ToolListFragment"
     private lateinit var mDatabase: FirebaseFirestore
     private lateinit var auth: FirebaseAuth
     private lateinit var collectionReference: CollectionReference

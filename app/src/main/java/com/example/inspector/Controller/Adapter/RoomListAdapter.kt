@@ -30,7 +30,7 @@ class RoomListAdapter(options: FirestoreRecyclerOptions<Room>, private val conte
             item.itemView.setOnClickListener {
                 val bundle = Bundle()
                 bundle.putSerializable("room", model)
-               // it.findNavController().navigate(R.id.action_nav_my_reports_to_controlDetailsFragment, bundle)
+                it.findNavController().navigate(R.id.action_nav_my_reports_to_roomDetailsFragment, bundle)
             }
         }
     }
