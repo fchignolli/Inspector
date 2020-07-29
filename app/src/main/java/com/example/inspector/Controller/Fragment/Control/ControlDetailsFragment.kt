@@ -1,4 +1,4 @@
-package com.example.inspector.Controller.Fragment
+package com.example.inspector.Controller.Fragment.Control
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment

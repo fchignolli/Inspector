@@ -1,4 +1,4 @@
-package com.example.inspector.Controller.Fragment
+package com.example.inspector.Controller.Fragment.Room
 
 import android.graphics.Canvas
 import android.os.Bundle
@@ -12,7 +12,6 @@ import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.ItemTouchHelper
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.inspector.Controller.Adapter.ControlListAdapter
 import com.example.inspector.Controller.Adapter.RoomListAdapter
 import com.example.inspector.Model.Room
 import com.example.inspector.R

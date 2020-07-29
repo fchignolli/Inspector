@@ -1,4 +1,4 @@
-package com.example.inspector.Controller.Fragment
+package com.example.inspector.Controller.Fragment.Tool
 
 import android.app.Activity
 import android.content.Intent

@@ -8,6 +8,9 @@ import android.view.WindowManager
 import androidx.fragment.app.Fragment
 import androidx.viewpager.widget.ViewPager
 import com.example.inspector.Controller.Adapter.TabsAdapter
+import com.example.inspector.Controller.Fragment.Control.ControlListFragment
+import com.example.inspector.Controller.Fragment.Room.RoomListFragment
+import com.example.inspector.Controller.Fragment.Tool.ToolListFragment
 import com.example.inspector.R
 import com.google.android.material.tabs.TabLayout
 

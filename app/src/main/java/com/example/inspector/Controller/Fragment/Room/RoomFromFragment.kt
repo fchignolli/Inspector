@@ -1,4 +1,4 @@
-package com.example.inspector.Controller.Fragment
+package com.example.inspector.Controller.Fragment.Room
 
 import android.app.Activity
 import android.content.Intent

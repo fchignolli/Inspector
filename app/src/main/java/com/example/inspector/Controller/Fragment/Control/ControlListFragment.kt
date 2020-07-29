@@ -1,21 +1,19 @@
-package com.example.inspector.Controller.Fragment
+package com.example.inspector.Controller.Fragment.Control
 
 import android.graphics.Canvas
 import android.os.Bundle
 import android.util.Log
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.core.content.ContextCompat
+import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.ItemTouchHelper
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.inspector.Controller.Adapter.RoomListAdapter
-import com.example.inspector.Controller.Adapter.ToolListAdapter
-import com.example.inspector.Model.Room
-import com.example.inspector.Model.Tool
+import com.example.inspector.Controller.Adapter.ControlListAdapter
+import com.example.inspector.Model.Control
 import com.example.inspector.R
 import com.firebase.ui.firestore.FirestoreRecyclerOptions
 import com.google.android.material.snackbar.Snackbar
@@ -25,27 +23,28 @@ import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.Query
 import it.xabaras.android.recyclerview.swipedecorator.RecyclerViewSwipeDecorator
 
-class ToolListFragment : Fragment() {
-    private val TAG = "RoomListFragment"
+
+class ControlListFragment : Fragment() {
+    private val TAG = "ControlListFragment"
     private lateinit var mDatabase: FirebaseFirestore
     private lateinit var auth: FirebaseAuth
-    private lateinit var collectionReference: CollectionReference
-    private lateinit var toollistAdapter: ToolListAdapter
+    private lateinit var collectionControl: CollectionReference
+    private lateinit var controlAdapter: ControlListAdapter
     private lateinit var recyclerView: RecyclerView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         mDatabase = FirebaseFirestore.getInstance()
         auth = FirebaseAuth.getInstance()
-        collectionReference = mDatabase.collection("users").document(auth.currentUser?.uid.toString()).collection("tool_form")
+        collectionControl = mDatabase.collection("users").document(auth.currentUser?.uid.toString()).collection("control_form")
     }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val root = inflater.inflate(R.layout.fragment_tool_list, container, false)
-        recyclerView = root.findViewById(R.id.toolRecyclerView)
+        val root = inflater.inflate(R.layout.fragment_control_list, container, false)
+        recyclerView = root.findViewById(R.id.recyclerView)
         return root
     }
 
@@ -53,13 +52,13 @@ class ToolListFragment : Fragment() {
         super.onStart()
         setupRecyclerView()
         itemTouchEvent()
-        loadToolList()
-        toollistAdapter.startListening()
+        loadControlList()
+        controlAdapter.startListening()
     }
 
     override fun onStop() {
         super.onStop()
-        toollistAdapter.stopListening()
+        controlAdapter.stopListening()
     }
 
     private fun setupRecyclerView() {
@@ -68,11 +67,11 @@ class ToolListFragment : Fragment() {
         recyclerView.setHasFixedSize(true)
     }
 
-    private fun loadToolList() {
-        val query = collectionReference.orderBy("date", Query.Direction.ASCENDING)
-        val options = FirestoreRecyclerOptions.Builder<Tool>().setQuery(query, Tool::class.java).build()
-        toollistAdapter = ToolListAdapter(options, context!!)
-        recyclerView.adapter = toollistAdapter
+    private fun loadControlList() {
+        val query = collectionControl.orderBy("date", Query.Direction.ASCENDING)
+        val options = FirestoreRecyclerOptions.Builder<Control>().setQuery(query, Control::class.java).build()
+        controlAdapter = ControlListAdapter(options, context!!)
+        recyclerView.adapter = controlAdapter
     }
 
     private fun itemTouchEvent() {
@@ -105,8 +104,8 @@ class ToolListFragment : Fragment() {
     }
 
     private fun deleteDocument(position: Int) {
-        val control = toollistAdapter.getItem(position)
-        val documentReference = toollistAdapter.snapshots.getSnapshot(position).reference
+        val control = controlAdapter.getItem(position)
+        val documentReference = controlAdapter.snapshots.getSnapshot(position).reference
         documentReference.delete()
             .addOnSuccessListener {
                 Log.d(TAG, "Item ${control.placeName} deletado com sucesso!" )
@@ -119,3 +118,4 @@ class ToolListFragment : Fragment() {
             .show()
     }
 }
+

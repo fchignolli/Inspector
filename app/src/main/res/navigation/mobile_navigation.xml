@@ -59,17 +59,17 @@
             tools:layout="@layout/fragment_profile" />
     <fragment
             android:id="@+id/controlFormFragment"
-            android:name="com.example.inspector.Controller.Fragment.ControlFormFragment"
+            android:name="com.example.inspector.Controller.Fragment.Control.ControlFormFragment"
             android:label="@string/home_control_form"
             tools:layout="@layout/fragment_control_form" />
     <fragment
             android:id="@+id/roomFromFragment"
-            android:name="com.example.inspector.Controller.Fragment.RoomFromFragment"
+            android:name="com.example.inspector.Controller.Fragment.Room.RoomFromFragment"
             android:label="@string/home_room_form"
             tools:layout="@layout/fragment_room_from" />
     <fragment
             android:id="@+id/toolFormFragment"
-            android:name="com.example.inspector.Controller.Fragment.ToolFormFragment"
+            android:name="com.example.inspector.Controller.Fragment.Tool.ToolFormFragment"
             android:label="@string/home_tool_form"
             tools:layout="@layout/fragment_tool_form" />
     <fragment
@@ -79,22 +79,22 @@
             tools:layout="@layout/fragment_rules" />
     <fragment
             android:id="@+id/controlListFragment"
-            android:name="com.example.inspector.Controller.Fragment.ControlListFragment"
+            android:name="com.example.inspector.Controller.Fragment.Control.ControlListFragment"
             android:label="fragment_control_list"
             tools:layout="@layout/fragment_control_list" />
     <fragment
             android:id="@+id/roomListFragment"
-            android:name="com.example.inspector.Controller.Fragment.RoomListFragment"
+            android:name="com.example.inspector.Controller.Fragment.Room.RoomListFragment"
             android:label="fragment_room_list"
             tools:layout="@layout/fragment_room_list" />
     <fragment
             android:id="@+id/toolListFragment"
-            android:name="com.example.inspector.Controller.Fragment.ToolListFragment"
+            android:name="com.example.inspector.Controller.Fragment.Tool.ToolListFragment"
             android:label="fragment_tool_list"
             tools:layout="@layout/fragment_tool_list" />
     <fragment
             android:id="@+id/controlDetailsFragment"
-            android:name="com.example.inspector.Controller.Fragment.ControlDetailsFragment"
+            android:name="com.example.inspector.Controller.Fragment.Control.ControlDetailsFragment"
             android:label="@string/detail"
             tools:layout="@layout/fragment_control_details" />
 </navigation>
