@@ -78,6 +78,8 @@
     <string name="symbol_should_have">Símbolo internacional de presença de radiação ionizante.</string>
     <string name="information_about_source">Informação sobre a fonte de radiação.</string>
     <string name="action_plan">Plano de ação para situação de emergência contendo a identificação dos responsáveis a serem acionados em situação de emergência e seus telefones para contato.</string>
+    <!-- SALAS COM FONTE DETALHES-->
+    <string name="must_owm_fisrt_section_details">As salas de tratamento deveriam possuir:</string>
     <!-- INTRUMENTAÇÃO DE MEDIDA -->
     <string name="instrusment_form_title">O Serviço de Radioterapia deve dispor dos seguintes instrumentos de medição de grandezas de influência:</string>
     <string name="barometer_resolution">Resolução mínima do barômetro do tipo aneróide</string>
@@ -87,6 +89,9 @@
     <string name="simulator_dosimetry">Simulador para dosimetria compatível com os feixes de radiação e técnicas de tratamento</string>
     <string name="laser_aligner">Alinhador de laser</string>
     <string name="stability_checker">Verificador de estabilidade e simetria do feixe compatível com os feixes de radiação e técnicas de tratamento, no caso de aceleradores lineares.</string>
+    <!-- INSTRUMENTACAO DETALHES-->
+    <string name="instrusment_form_title_details">O Serviço de Radioterapia teve os seguintes instrumentos de medição de grandezas de influência:</string>
+    <string name="checkbox_tool_title_details">Esses são os seguintes acessórios para auxiliar a dosimetria de fontes de radiação que o serviço de Radioterapia tinha:</string>
 
     <string-array name="yes_no_array">
         <item>Sim</item>
