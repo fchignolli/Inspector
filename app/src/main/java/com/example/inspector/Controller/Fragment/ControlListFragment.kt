@@ -1,7 +1,6 @@
 package com.example.inspector.Controller.Fragment
 
 import android.graphics.Canvas
-import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
@@ -9,7 +8,6 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
-import androidx.navigation.findNavController
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.ItemTouchHelper
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -17,7 +15,6 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.inspector.Controller.Adapter.ControlListAdapter
 import com.example.inspector.Model.Control
 import com.example.inspector.R
-import com.example.inspector.Utils.Utils
 import com.firebase.ui.firestore.FirestoreRecyclerOptions
 import com.google.android.material.snackbar.Snackbar
 import com.google.firebase.auth.FirebaseAuth
@@ -48,8 +45,36 @@ class ControlListFragment : Fragment() {
     ): View? {
         val root = inflater.inflate(R.layout.fragment_control_list, container, false)
         recyclerView = root.findViewById(R.id.recyclerView)
-        setupRecyclerView()
+        return root
+    }
 
+    override fun onStart() {
+        super.onStart()
+        setupRecyclerView()
+        itemTouchEvent()
+        loadControlList()
+        controlAdapter.startListening()
+    }
+
+    override fun onStop() {
+        super.onStop()
+        controlAdapter.stopListening()
+    }
+
+    private fun setupRecyclerView() {
+        recyclerView.layoutManager = LinearLayoutManager(context, RecyclerView.VERTICAL, false)
+        recyclerView.addItemDecoration(DividerItemDecoration(context, DividerItemDecoration.VERTICAL))
+        recyclerView.setHasFixedSize(true)
+    }
+
+    private fun loadControlList() {
+        val query = collectionControl.orderBy("date", Query.Direction.ASCENDING)
+        val options = FirestoreRecyclerOptions.Builder<Control>().setQuery(query, Control::class.java).build()
+        controlAdapter = ControlListAdapter(options, context!!)
+        recyclerView.adapter = controlAdapter
+    }
+
+    private fun itemTouchEvent() {
         val itemTouchHelperCallback =
             object :
                 ItemTouchHelper.SimpleCallback(0, ItemTouchHelper.LEFT) {
@@ -76,31 +101,6 @@ class ControlListFragment : Fragment() {
 
         val itemTouchHelper = ItemTouchHelper(itemTouchHelperCallback)
         itemTouchHelper.attachToRecyclerView(recyclerView)
-        return root
-    }
-
-    override fun onStart() {
-        super.onStart()
-        loadControlList()
-        controlAdapter.startListening()
-    }
-
-    override fun onStop() {
-        super.onStop()
-        controlAdapter.stopListening()
-    }
-
-    private fun setupRecyclerView() {
-        recyclerView.layoutManager = LinearLayoutManager(context, RecyclerView.VERTICAL, false)
-        recyclerView.addItemDecoration(DividerItemDecoration(context, DividerItemDecoration.VERTICAL))
-        recyclerView.setHasFixedSize(true)
-    }
-
-    private fun loadControlList() {
-        val query = collectionControl.orderBy("date", Query.Direction.ASCENDING)
-        val options = FirestoreRecyclerOptions.Builder<Control>().setQuery(query, Control::class.java).build()
-        controlAdapter = ControlListAdapter(options, context!!)
-        recyclerView.adapter = controlAdapter
     }
 
     private fun deleteDocument(position: Int) {

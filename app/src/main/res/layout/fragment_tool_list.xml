@@ -5,10 +5,11 @@
         android:layout_height="match_parent"
         tools:context=".Controller.Fragment.ToolListFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/toolRecyclerView"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:text="INSTRUMENTOS" />
-
+            tools:listitem="@layout/item_default_form"/>
 </FrameLayout>
+
+
