@@ -78,14 +78,15 @@
     <string name="symbol_should_have">Símbolo internacional de presença de radiação ionizante.</string>
     <string name="information_about_source">Informação sobre a fonte de radiação.</string>
     <string name="action_plan">Plano de ação para situação de emergência contendo a identificação dos responsáveis a serem acionados em situação de emergência e seus telefones para contato.</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="address_found">Endereço encontrado</string>
-    <string name="no_address_found">Endereço não encontrado</string>
-    <string name="invalid_lat_long_used">Uso invalido de um lateinit long</string>
-    <string name="service_not_available">Serviço não disponivel</string>
-    <string name="no_location_data_provided">Local não fornecido</string>
-
+    <!-- INTRUMENTAÇÃO DE MEDIDA --> 
+    <string name="instrusment_form_title">O Serviço de Radioterapia deve dispor dos seguintes instrumentos de medição de grandezas de influência:</string>
+    <string name="barometer_resolution">Resolução mínima do barômetro do tipo aneróide</string>
+    <string name="thermometer_resolution">Resolução mínima termômetro</string>
+    <string name="ruler_resolution">Resolução mínima da régua</string>
+    <string name="checkbox_tool_title">Marque quais o  seguintes acessórios para auxiliar a dosimetria de fontes de radiação que o serviço de Radioterapia tem:</string>
+    <string name="simulator_dosimetry">Simulador para dosimetria compatível com os feixes de radiação e técnicas de tratamento</string>
+    <string name="laser_aligner">Alinhador de laser</string>
+    <string name="stability_checker">Verificador de estabilidade e simetria do feixe compatível com os feixes de radiação e técnicas de tratamento, no caso de aceleradores lineares.</string>
 
     <string-array name="yes_no_array">
         <item>Sim</item>
