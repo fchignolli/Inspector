@@ -11,7 +11,7 @@
 - [x] Login
 - [x] Menu
 - [x] Home
-- [x ] Formulário de inspeção
+- [x] Formulário de inspeção
 
 ## Ingração da View com o View Controller
 - [x] Login
