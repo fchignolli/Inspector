@@ -19,6 +19,7 @@ class ForgotPasswordActivity : AppCompatActivity() {
         sendButton.setOnClickListener {
             if(Validator.isEmptyField(emailTextInput) || !Validator.isEmailPatters(emailTextInput)) {
                 return@setOnClickListener
+                
             } else {
                 val emailText = emailTextInput.editText?.text.toString()
                 FirebaseAuth.getInstance().sendPasswordResetEmail(emailText)
